@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "maquillajes",
+  "info": {
+    "singularName": "maquillaje",
+    "pluralName": "maquillajes",
+    "displayName": "Maquillaje",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "descripcion": {
+      "type": "blocks"
+    },
+    "precio": {
+      "type": "decimal",
+      "required": true
+    },
+    "imagen": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "marca": {
+      "type": "string"
+    },
+    "url": {
+      "type": "uid",
+      "targetField": "nombre"
+    }
+  }
+}
